@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-contenido">
+            <div class="nombre">
+                <h1>Gabriel Neculman</h1>
+                <p class="subtitle">Estudiante en técnico en informática</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" aria-label="Ir a inicio">Inicio</a></li>
+                <li><a href="#habilidades" aria-label="Ir a habilidades">Habilidades</a></li>
+                <li><a href="#proyectos" aria-label="Ir a proyectos">Proyectos</a></li>
+                <li><a href="#contacto" aria-label="Ir a contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="presentacion">
+            <div class="perfil">
+                <div class="foto-container">
+                    <img src="./assets/img/gato.jpg" alt="Foto de perfil de Gabriel Neculman" class="foto-perfil">
+                </div>
+                <div class="presentacion-texto">
+                    <h2>¡Hola! Soy Gabriel</h2>
+                    <p>Soy un estudiante en informática que está aprendiendo a usar HTML, CSS y JavaScript. Me está gustando crear sitios web responsivos y accesibles que brindan una excelente experiencia a usuarios.</p>
+                    <div class="botones-container">
+                        <a href="./assets/pdf/cVitae.pdf" class="cv-btn" download="CV-Gabriel-Neculman.pdf">
+                            <i class="fas fa-download"></i> Descargar Curriculum
+                        </a>
+                        <button class="contacto-btn" onclick="mostrarFormulario()">Contáctame</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li>
+                    HTML
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                    <span class="nivel">Intermedio</span>
+                </li>
+                <li>
+                    CSS
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                    <span class="nivel">Intermedio</span>
+                </li>
+                <li>
+                    Java
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                    <span class="nivel">Intermedio</span>
+                </li>
+                <li>
+                    Git
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                    <span class="nivel">Intermedio</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="habilidades-blandas" class="habilidades-blandas">
+            <h2>Habilidades Blandas</h2>
+            <ul>
+                <li><i class="fas fa-lightbulb"></i> Resolución de Problemas</li>
+                <li><i class="fas fa-comments"></i> Comunicación Efectiva</li>
+                <li><i class="fas fa-sync-alt"></i> Adaptabilidad</li>
+                <li><i class="fas fa-users"></i> Trabajo en Equipo</li>
+                <li><i class="fas fa-clock"></i> Gestión del Tiempo</li>
+            </ul>
+        </section>
+
+        <section id="proyectos" class="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="proyecto">
+                <img src="./assets/img/anime.jpg" alt="Proyecto 1">
+                <h3>Página Web Diario</h3>
+                <p>Proyecto de página web desarrollado con HTML, CSS y JavaScript.</p>
+                <a href="https://github.com/vermeld/Pagina-web-diario.git" target="_blank" class="proyecto-link" aria-label="Ver proyecto en GitHub">
+                    <i class="fab fa-github"></i> Ver en GitHub
+                </a>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <div class="info-contacto">
+                <a href="https://github.com" target="_blank" class="contacto-btn" aria-label="GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <button class="contacto-btn" onclick="mostrarFormulario()">Contáctame</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal del Formulario -->
+    <div id="formularioModal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarFormulario()">&times;</span>
+            <h2>Formulario de Contacto</h2>
+            <form id="formularioContacto">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="enviar-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Gabriel Neculman. Todos los derechos reservados.</p>
+        <p>Diseñado con ❤️ por Gabriel Neculman</p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html> 
